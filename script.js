@@ -9,15 +9,18 @@ const result = document.getElementById("result");
 
 let i = 0;
 
-// spin animation
+// 🔄 spinning animation (shows all names moving)
 const spin = setInterval(() => {
   wheel.innerText = names[i % names.length];
   i++;
 }, 120);
 
-// 🔒 FORCE RESULT TO GILES
+// ⏹️ stop spinning and FORCE result
 setTimeout(() => {
   clearInterval(spin);
-  wheel.innerText = "Giles";
-  result.innerText = "🎁 You got: GILES";
+
+  // 🎯 FORCED RESULT
+  wheel.innerText = "Alister";
+  result.innerText = "🎁 You got: ALISTER";
+
 }, 3000);
